@@ -5,11 +5,13 @@ Source: https://www.noordhollandsdagblad.nl/regio/alkmaar/
 """
 
 import logging
+import re
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import pytz
+import requests
 import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 from feedgen.feed import FeedGenerator
@@ -32,6 +34,41 @@ def stable_fallback_date(identifier):
     hash_val = abs(hash(identifier)) % 730
     epoch = datetime(2024, 1, 1, 0, 0, 0, tzinfo=pytz.UTC)
     return epoch + timedelta(days=hash_val)
+
+
+def fetch_article_date_with_driver(driver, url):
+    """Fetch the publication date from an article page using an existing Selenium driver."""
+    try:
+        driver.get(url)
+        time.sleep(1)  # Brief wait for JS to render
+
+        html = driver.page_source
+        soup = BeautifulSoup(html, "html.parser")
+
+        # Try to find date pattern in page text (format: DD-MM-YY, HH:MM)
+        text = soup.get_text()
+        date_pattern = r"(\d{2})-(\d{2})-(\d{2}),?\s*(\d{2}):(\d{2})"
+        match = re.search(date_pattern, text)
+        if match:
+            day, month, year, hour, minute = match.groups()
+            year_full = 2000 + int(year)
+            try:
+                dt = datetime(
+                    year_full,
+                    int(month),
+                    int(day),
+                    int(hour),
+                    int(minute),
+                    tzinfo=pytz.timezone("Europe/Amsterdam"),
+                )
+                return dt.astimezone(pytz.UTC)
+            except ValueError:
+                pass
+
+        return None
+    except Exception as e:
+        logger.debug(f"Could not fetch date from {url}: {e}")
+        return None
 
 
 def get_project_root():
@@ -60,12 +97,22 @@ def setup_selenium_driver():
     return uc.Chrome(options=options)
 
 
-def fetch_page_content(url=BLOG_URL):
-    """Fetch the fully loaded HTML content using Selenium."""
-    driver = None
+def fetch_page_content(url=BLOG_URL, driver=None):
+    """Fetch the fully loaded HTML content using Selenium.
+
+    Args:
+        url: The URL to fetch
+        driver: Optional existing driver to reuse. If None, creates a new one.
+
+    Returns:
+        tuple: (html_content, driver) - The driver is returned for reuse
+    """
+    created_driver = False
     try:
         logger.info(f"Fetching content from URL: {url}")
-        driver = setup_selenium_driver()
+        if driver is None:
+            driver = setup_selenium_driver()
+            created_driver = True
         driver.get(url)
 
         # Wait for initial page load
@@ -84,22 +131,32 @@ def fetch_page_content(url=BLOG_URL):
 
         html_content = driver.page_source
         logger.info("Successfully fetched HTML content")
-        return html_content
+        return html_content, driver
 
     except Exception as e:
         logger.error(f"Error fetching content: {e}")
-        raise
-    finally:
-        if driver:
+        if created_driver and driver:
             driver.quit()
+        raise
 
 
-def parse_articles(html_content):
-    """Parse the HTML and extract articles."""
+def parse_articles(html_content, driver=None):
+    """Parse the HTML and extract articles.
+
+    Args:
+        html_content: The HTML content to parse
+        driver: Optional Selenium driver for fetching article dates
+    """
     try:
         soup = BeautifulSoup(html_content, "html.parser")
         articles = []
         seen_links = set()
+
+        # Remove "MEEST GELEZEN" section to avoid picking up articles from sidebar
+        meest_gelezen = soup.select_one("[id*='MEEST-GELEZEN']")
+        if meest_gelezen:
+            meest_gelezen.decompose()
+            logger.info("Removed MEEST GELEZEN section from parsing")
 
         # Find all article elements
         article_elements = soup.select("article[data-article-id]")
@@ -109,8 +166,8 @@ def parse_articles(html_content):
             try:
                 article_id = article.get("data-article-id", "")
 
-                # Find the main link
-                link_elem = article.select_one("a[href*='/regio/']")
+                # Find the main link - only Alkmaar region
+                link_elem = article.select_one("a[href*='/regio/alkmaar/']")
                 if not link_elem:
                     continue
 
@@ -129,15 +186,43 @@ def parse_articles(html_content):
                     continue
                 seen_links.add(link)
 
-                # Extract title from h2 heading
-                title_elem = article.select_one("h2 span")
+                # Extract title from specific title span (avoid category labels)
+                title_elem = article.select_one("span[class*='title__title']")
                 if not title_elem:
-                    title_elem = article.select_one("h2")
+                    title_elem = article.select_one("span[class*='teaser-content__title__title']")
+                if not title_elem:
+                    # Fallback: try to find the last span in h2 (usually the actual title)
+                    h2_elem = article.select_one("h2, h3")
+                    if h2_elem:
+                        spans = h2_elem.select("span")
+                        # Get the last span that has substantial text (the title)
+                        for span in reversed(spans):
+                            text = span.get_text(strip=True)
+                            if len(text) > 10 and not any(
+                                cat in text.lower()
+                                for cat in ["premium", "interview", "column", "reportage"]
+                            ):
+                                title_elem = span
+                                break
 
                 title = title_elem.get_text(strip=True) if title_elem else ""
                 if not title:
-                    # Try getting title from the link's text content
+                    # Last resort: try the link text but clean it
                     title = link_elem.get_text(strip=True)
+
+                # Strip common category prefixes that may have been concatenated
+                prefixes_to_strip = [
+                    "PremiumInterview", "PremiumColumn", "PremiumReportage",
+                    "PremiumVerdriet", "PremiumWarmtenet", "PremiumEnquête",
+                    "PremiumTraditie", "PremiumFestival", "PremiumAfscheidsinterview",
+                    "PremiumHoge beloning", "PremiumSeniorenhuisvesting",
+                    "Premium", "Interview", "Column", "Reportage", "Zitting",
+                    "Politiek", "112", "Overleden", "Gezondheid", "Verdriet"
+                ]
+                for prefix in prefixes_to_strip:
+                    if title.startswith(prefix):
+                        title = title[len(prefix):].strip()
+                        break
 
                 if not title or len(title) < 5:
                     logger.debug(f"Skipping article without valid title: {link}")
@@ -160,9 +245,14 @@ def parse_articles(html_content):
                 if is_premium and category == "Nieuws":
                     category = "Premium"
 
-                # Date extraction - NHD doesn't show dates on the overview page
-                # Use stable fallback based on article ID
-                date = stable_fallback_date(article_id or link)
+                # Date extraction - fetch from individual article page if driver available
+                date = None
+                if driver:
+                    date = fetch_article_date_with_driver(driver, link)
+                if not date:
+                    # Fallback to stable hash-based date
+                    date = stable_fallback_date(article_id or link)
+                    logger.debug(f"Using fallback date for: {link}")
 
                 article_data = {
                     "title": title,
@@ -197,21 +287,40 @@ def parse_articles(html_content):
                     continue
                 seen_links.add(link)
 
-                # Try to extract title from various possible locations
-                title_elem = link_elem.select_one("h2, h3, h4")
+                # Try to extract title from specific title span
+                title_elem = link_elem.select_one("span[class*='title__title']")
+                if not title_elem:
+                    title_elem = link_elem.select_one("span[class*='teaser-content__title__title']")
                 if not title_elem:
                     # Look for title in parent or sibling elements
                     parent = link_elem.parent
                     if parent:
-                        title_elem = parent.select_one("h2, h3, h4")
+                        title_elem = parent.select_one("span[class*='title__title']")
 
                 title = title_elem.get_text(strip=True) if title_elem else ""
 
-                # Also check for span elements with title content
+                # Fallback: try h2/h3/h4 but get specific span
                 if not title:
-                    span_title = link_elem.select_one("span[class*='title']")
-                    if span_title:
-                        title = span_title.get_text(strip=True)
+                    heading = link_elem.select_one("h2, h3, h4")
+                    if heading:
+                        spans = heading.select("span")
+                        for span in reversed(spans):
+                            text = span.get_text(strip=True)
+                            if len(text) > 10:
+                                title = text
+                                break
+
+                # Strip common category prefixes
+                prefixes_to_strip = [
+                    "PremiumInterview", "PremiumColumn", "PremiumReportage",
+                    "PremiumVerdriet", "PremiumWarmtenet", "PremiumEnquête",
+                    "Premium", "Interview", "Column", "Reportage", "Zitting",
+                    "Politiek", "112", "Overleden", "Gezondheid", "Verdriet"
+                ]
+                for prefix in prefixes_to_strip:
+                    if title.startswith(prefix):
+                        title = title[len(prefix):].strip()
+                        break
 
                 if not title or len(title) < 5:
                     continue
@@ -223,11 +332,18 @@ def parse_articles(html_content):
                     if parts:
                         article_id = parts[-1].split("-")[-1] if "-" in parts[-1] else parts[-1]
 
+                # Fetch real date from article page if driver available
+                date = None
+                if driver:
+                    date = fetch_article_date_with_driver(driver, link)
+                if not date:
+                    date = stable_fallback_date(article_id or link)
+
                 article_data = {
                     "title": title,
                     "link": link,
                     "description": title,
-                    "date": stable_fallback_date(article_id or link),
+                    "date": date,
                     "category": "Nieuws",
                     "article_id": article_id,
                 }
@@ -301,12 +417,14 @@ def save_rss_feed(feed_generator):
 
 def main():
     """Main function to generate RSS feed."""
+    driver = None
     try:
-        # Fetch page content
-        html_content = fetch_page_content()
+        # Fetch page content (returns driver for reuse)
+        html_content, driver = fetch_page_content()
 
-        # Parse articles
-        articles = parse_articles(html_content)
+        # Parse articles (uses driver to fetch real dates)
+        logger.info("Parsing articles and fetching publication dates...")
+        articles = parse_articles(html_content, driver)
 
         if not articles:
             logger.warning("No articles found!")
@@ -324,6 +442,9 @@ def main():
     except Exception as e:
         logger.error(f"Failed to generate RSS feed: {str(e)}")
         return False
+    finally:
+        if driver:
+            driver.quit()
 
 
 if __name__ == "__main__":
