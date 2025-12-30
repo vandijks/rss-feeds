@@ -179,3 +179,6 @@ cython_debug/
 
 # HTML
 *.html
+
+# Plans directory (private notes)
+plans/

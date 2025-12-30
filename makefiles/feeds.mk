@@ -135,6 +135,13 @@ feeds_windsurf_next_changelog: ## Generate RSS feed for Windsurf Next Changelog
 	$(Q)python feed_generators/windsurf_next_changelog.py
 	$(call print_success,Windsurf Next Changelog feed generated)
 
+.PHONY: feeds_noordhollandsdagblad_alkmaar
+feeds_noordhollandsdagblad_alkmaar: ## Generate RSS feed for Noordhollands Dagblad - Alkmaar
+	$(call check_venv)
+	$(call print_info,Generating Noordhollands Dagblad Alkmaar feed)
+	$(Q)python feed_generators/noordhollandsdagblad_alkmaar.py
+	$(call print_success,Noordhollands Dagblad Alkmaar feed generated)
+
 .PHONY: clean_feeds
 clean_feeds: ## Clean generated RSS feed files
 	$(call print_warning,Removing generated RSS feeds)
