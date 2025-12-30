@@ -6,30 +6,11 @@
 
 ## tl;dr Available RSS Feeds <!-- omit in toc -->
 
-| Blog                                                                                      | Feed                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Anthropic News](https://www.anthropic.com/news)                                          | [feed_anthropic_news.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_anthropic_news.xml)                                   |
-| [Anthropic Engineering](https://www.anthropic.com/engineering)                            | [feed_anthropic_engineering.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_anthropic_engineering.xml)                     |
-| [Anthropic Research](https://www.anthropic.com/research)                                  | [feed_anthropic_research.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_anthropic_research.xml)                           |
-| [Anthropic Frontier Red Team](https://red.anthropic.com/)                                 | [feed_anthropic_red.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_anthropic_red.xml)                                     |
-| [Claude Code Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) | [feed_anthropic_changelog_claude_code.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_anthropic_changelog_claude_code.xml) |
-| [OpenAI Research](https://openai.com/news/research/)                                      | [feed_openai_research.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_openai_research.xml)                                 |
-| [Ollama Blog](https://ollama.com/blog)                                                    | [feed_ollama.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_ollama.xml)                                                   |
-| [Paul Graham's Articles](https://www.paulgraham.com/articles.html)                        | [feed_paulgraham.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_paulgraham.xml)                                           |
-| [Surge AI Blog](https://www.surgehq.ai/blog)                                              | [feed_blogsurgeai.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_blogsurgeai.xml)                                         |
-| [xAI News](https://x.ai/news)                                                             | [feed_xainews.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_xainews.xml)                                                 |
-| [Chander Ramesh's Writing](https://chanderramesh.com/writing)                             | [feed_chanderramesh.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_chanderramesh.xml)                                     |
-| [Thinking Machines Lab](https://thinkingmachines.ai/blog/)                                | [feed_thinkingmachines.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_thinkingmachines.xml)                               |
-| [Hamel Husain's Blog](https://hamel.dev/)                                                 | [feed_hamel.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_hamel.xml)                                                     |
-| [Cursor Blog](https://cursor.com/blog)                                                    | [feed_cursor.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_cursor.xml)                                                   |
-| [Windsurf Blog](https://windsurf.com/blog)                                                | [feed_windsurf_blog.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_windsurf_blog.xml)                                     |
-| [Windsurf Changelog](https://windsurf.com/changelog)                                      | [feed_windsurf_changelog.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_windsurf_changelog.xml)                           |
-| [Windsurf Next Changelog](https://windsurf.com/changelog/windsurf-next)                   | [feed_windsurf_next_changelog.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_windsurf_next_changelog.xml)                 |
-| [Noordhollands Dagblad - Alkmaar](https://www.noordhollandsdagblad.nl/regio/alkmaar/)     | [feed_noordhollandsdagblad_alkmaar.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml)       |
-| [Patrick Collison's Blog](https://patrickcollison.com/culture)                            | _planned_                                                                                                                                            |
-| [Supabase Blog](https://supabase.com/blog)                                                | _planned_                                                                                                                                            |
-| [David Crawshaw](https://crawshaw.io/)                                                    | _planned_                                                                                                                                            |
-| [Engineering.fyi](https://engineering.fyi/)                                               | _planned_                                                                                                                                            |
+| Blog                                                                                  | Feed                                                                                                                                           |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Noordhollands Dagblad - Alkmaar](https://www.noordhollandsdagblad.nl/regio/alkmaar/) | [feed_noordhollandsdagblad_alkmaar.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml) |
+
+> **Note:** Original feeds from the upstream repo are archived in `feed_generators/archive/` and `feeds/archive/` for reference.
 
 ### What is this?
 
@@ -57,7 +38,7 @@ You know that blog you like that doesn't have an RSS feed and might never will?
 - Use the **raw** link for your RSS reader. Example:
 
   ```text
-    https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_ollama.xml
+    https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml
   ```
 
 - Use your RSS reader of choice to subscribe to the feed (e.g., [Blogtrottr](https://blogtrottr.com/)).
