@@ -16,6 +16,13 @@ feeds_noordhollandsdagblad_alkmaar: ## Generate RSS feed for Noordhollands Dagbl
 	$(Q)python feed_generators/noordhollandsdagblad_alkmaar.py
 	$(call print_success,Noordhollands Dagblad Alkmaar feed generated)
 
+.PHONY: feeds_barrons
+feeds_barrons: ## Generate RSS feed for Barron's
+	$(call check_venv)
+	$(call print_info,Generating Barrons feed)
+	$(Q)python feed_generators/barrons.py
+	$(call print_success,Barrons feed generated)
+
 .PHONY: clean_feeds
 clean_feeds: ## Clean generated RSS feed files
 	$(call print_warning,Removing generated RSS feeds)

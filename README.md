@@ -9,6 +9,7 @@
 | Blog                                                                                  | Feed                                                                                                                                           |
 | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Noordhollands Dagblad - Alkmaar](https://www.noordhollandsdagblad.nl/regio/alkmaar/) | [feed_noordhollandsdagblad_alkmaar.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml) |
+| [Barron's](https://www.barrons.com/)                                                  | [feed_barrons.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_barrons.xml)                                           |
 
 > **Note:** Original feeds from the upstream repo are archived in `feed_generators/archive/` and `feeds/archive/` for reference.
 

@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Barron's</title>
+    <link>https://www.barrons.com/</link>
+    <description>Financial and Investment News</description>
+    <atom:link href="https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_barrons.xml" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <image>
+      <url>https://www.barrons.com/favicon.ico</url>
+      <title>Barron's</title>
+      <link>https://www.barrons.com/</link>
+    </image>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Jan 2026 15:30:01 +0000</lastBuildDate>
+    <item>
+      <title>Home Builder Stocks Start 2026 With a Bang. Why They Could Have Room to Run.</title>
+      <link>https://www.barrons.com/articles/home-builder-stocks-good-start-keep-momentum-293746e0</link>
+      <description>Home Builder Stocks Start 2026 With a Bang. Why They Could Have Room to Run.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/home-builder-stocks-good-start-keep-momentum-293746e0</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gold and Silver Fall. Watch This Next Catalyst.</title>
+      <link>https://www.barrons.com/articles/gold-silver-price-today-3f13a5f7</link>
+      <description>Gold and Silver Fall. Watch This Next Catalyst.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/gold-silver-price-today-3f13a5f7</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tesla Stock Can’t Handle the Robot Competition</title>
+      <link>https://www.barrons.com/articles/tesla-stock-price-ai-robot-competition-2ad7fe4b</link>
+      <description>Tesla Stock Can’t Handle the Robot Competition</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/tesla-stock-price-ai-robot-competition-2ad7fe4b</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Albemarle Stock Rises After Upgrade. Why Shares Aren’t Up Even More.</title>
+      <link>https://www.barrons.com/articles/albemarle-stock-price-upgrade-lithium-prices-06976991</link>
+      <description>Albemarle Stock Rises After Upgrade. Why Shares Aren’t Up Even More.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/albemarle-stock-price-upgrade-lithium-prices-06976991</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Hedge fund billionaire Chris Hohn’s $81m payday</title>
+      <link>https://www.fnlondon.com/articles/hedge-fund-billionaire-chris-hohns-81m-payday-f21058fc</link>
+      <description>Hedge fund billionaire Chris Hohn’s $81m payday</description>
+      <guid isPermaLink="false">https://www.fnlondon.com/articles/hedge-fund-billionaire-chris-hohns-81m-payday-f21058fc</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>D-Wave to Buy Quantum Circuits for $550 Million. Useful Computers Are Coming to Market.</title>
+      <link>https://www.barrons.com/articles/d-wave-quantum-circuits-acquisition-71905907</link>
+      <description>D-Wave to Buy Quantum Circuits for $550 Million. Useful Computers Are Coming to Market.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/d-wave-quantum-circuits-acquisition-71905907</guid>
+      <category>Latestnews</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>They Oversee Billions in Assets. What This Couple Talks About at Home.</title>
+      <link>https://www.barrons.com/articles/amy-falls-hartley-rogers-interview-finance-markets-economy-87d2070f</link>
+      <description>They Oversee Billions in Assets. What This Couple Talks About at Home.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/amy-falls-hartley-rogers-interview-finance-markets-economy-87d2070f</guid>
+      <category>CEOs &amp; Thought Leaders</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bill Nygren Isn’t Worried About Volatility. He Likes GM, Delta, and Capital One.</title>
+      <link>https://www.barrons.com/articles/bill-nygren-market-volatility-gm-delta-capital-one-stocks-db6b0e6a</link>
+      <description>Bill Nygren Isn’t Worried About Volatility. He Likes GM, Delta, and Capital One.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/bill-nygren-market-volatility-gm-delta-capital-one-stocks-db6b0e6a</guid>
+      <category>CEOs &amp; Thought Leaders</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Blue Owl Is Having a Rough Year. Its Co-CEO Says Investors’ Fears Are ‘Ungrounded.’</title>
+      <link>https://www.barrons.com/articles/blue-owl-co-ceo-fears-ungrounded-7bc0a3e5</link>
+      <description>Blue Owl Is Having a Rough Year. Its Co-CEO Says Investors’ Fears Are ‘Ungrounded.’</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/blue-owl-co-ceo-fears-ungrounded-7bc0a3e5</guid>
+      <category>CEOs &amp; Thought Leaders</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Novo Nordisk’s Wegovy Pill Hits Pharmacies. It’s the Latest Move in the Weight-Loss Showdown.</title>
+      <link>https://www.barrons.com/articles/novo-nordisk-stock-wegovy-pill-e398ec84</link>
+      <description>Novo Nordisk’s Wegovy Pill Hits Pharmacies. It’s the Latest Move in the Weight-Loss Showdown.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/novo-nordisk-stock-wegovy-pill-e398ec84</guid>
+      <category>Biotech &amp; Pharma</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Biotech and Pharma Stocks Tumble as Investors Race into Energy</title>
+      <link>https://www.barrons.com/articles/biotech-stocks-fall-energy-rises-75c35259</link>
+      <description>Biotech and Pharma Stocks Tumble as Investors Race into Energy</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/biotech-stocks-fall-energy-rises-75c35259</guid>
+      <category>Biotech &amp; Pharma</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>OneStream Is Going Private in $6.4 Billion Deal a Year After Its IPO. The Software Stock Soars.</title>
+      <link>https://www.barrons.com/articles/onestream-stock-buyout-report-f9321051</link>
+      <description>OneStream Is Going Private in $6.4 Billion Deal a Year After Its IPO. The Software Stock Soars.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/onestream-stock-buyout-report-f9321051</guid>
+      <category>Financials</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>These 3 Sectors Look Too Cheap to Ignore in 2026</title>
+      <link>https://www.barrons.com/articles/buy-stocks-financials-communication-services-utilities-4bd79a56</link>
+      <description>These 3 Sectors Look Too Cheap to Ignore in 2026</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/buy-stocks-financials-communication-services-utilities-4bd79a56</guid>
+      <category>Financials</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Strategy Stock Won’t Get Booted From Indexes, MSCI Says</title>
+      <link>https://www.barrons.com/articles/strategy-stock-price-msci-index-bitcoin-63de7e8f</link>
+      <description>Strategy Stock Won’t Get Booted From Indexes, MSCI Says</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/strategy-stock-price-msci-index-bitcoin-63de7e8f</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>TSMC Stock Can Keep Winning From AI, J.P. Morgan Says. It’s Not Good for Intel.</title>
+      <link>https://www.barrons.com/articles/tsmc-stock-price-intel-chips-nvidia-eb5f8045</link>
+      <description>TSMC Stock Can Keep Winning From AI, J.P. Morgan Says. It’s Not Good for Intel.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/tsmc-stock-price-intel-chips-nvidia-eb5f8045</guid>
+      <category>Technology</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Put Some Eggs in Cal-Maine Foods’ Basket</title>
+      <link>https://www.barrons.com/articles/wp-bar-0001531076</link>
+      <description>Put Some Eggs in Cal-Maine Foods’ Basket</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/wp-bar-0001531076</guid>
+      <category>Stock Picks</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Burlington Stores Offers More Than Coats to Keep Investors Warm This Winter</title>
+      <link>https://www.barrons.com/articles/burlington-stock-sales-tjx-0001541112</link>
+      <description>Burlington Stores Offers More Than Coats to Keep Investors Warm This Winter</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/burlington-stock-sales-tjx-0001541112</guid>
+      <category>Stock Picks</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Salesforce Stock Is Ready to Emerge an AI Winner</title>
+      <link>https://www.barrons.com/articles/wp-bar-0001546979</link>
+      <description>Salesforce Stock Is Ready to Emerge an AI Winner</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/wp-bar-0001546979</guid>
+      <category>Stock Picks</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Charles Schwab Is Back On Offense. Its Stock Is a Buy.</title>
+      <link>https://www.barrons.com/articles/wp-bar-0001549236</link>
+      <description>Charles Schwab Is Back On Offense. Its Stock Is a Buy.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/wp-bar-0001549236</guid>
+      <category>Stock Picks</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Nvidia’s CFO Is Upbeat. She Sees ‘Tremendous’ Demand for AI.</title>
+      <link>https://www.barrons.com/articles/nvidia-cfo-ai-chip-demand-d5b30ff5</link>
+      <description>Nvidia’s CFO Is Upbeat. She Sees ‘Tremendous’ Demand for AI.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/nvidia-cfo-ai-chip-demand-d5b30ff5</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bitcoin Drops. Why the Crypto Rally Is Taking a Pause.</title>
+      <link>https://www.barrons.com/articles/bitcoin-price-today-xrp-ethereum-cryptos-35636124</link>
+      <description>Bitcoin Drops. Why the Crypto Rally Is Taking a Pause.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/bitcoin-price-today-xrp-ethereum-cryptos-35636124</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Compass and Anywhere Clear a Key Merger Hurdle</title>
+      <link>https://www.barrons.com/articles/compass-anywhere-real-estate-stock-merger-649a9327</link>
+      <description>Compass and Anywhere Clear a Key Merger Hurdle</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/compass-anywhere-real-estate-stock-merger-649a9327</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>JPMorgan Chase Cuts Ties With Proxy Advisors, Launches AI Voting Tool</title>
+      <link>https://www.barrons.com/articles/jpmorgan-chase-proxy-advisors-report-8cf5cdb9</link>
+      <description>JPMorgan Chase Cuts Ties With Proxy Advisors, Launches AI Voting Tool</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/jpmorgan-chase-proxy-advisors-report-8cf5cdb9</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Cal-Maine Earnings Beat Wall Street Estimates. Why the Stock Is Falling.</title>
+      <link>https://www.barrons.com/articles/cal-maine-earnings-stock-price-cc4f8699</link>
+      <description>Cal-Maine Earnings Beat Wall Street Estimates. Why the Stock Is Falling.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/cal-maine-earnings-stock-price-cc4f8699</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Silver Exhibits a Rare Trading Phenomenon. How to Play It.</title>
+      <link>https://www.barrons.com/articles/gold-silver-rare-trading-phenomenon-e929e1aa</link>
+      <description>Silver Exhibits a Rare Trading Phenomenon. How to Play It.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/gold-silver-rare-trading-phenomenon-e929e1aa</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tariffs Crimped Hiring in 2025. Why This Year Looks Better.</title>
+      <link>https://www.barrons.com/articles/tariffs-crimped-hiring-2025-this-year-looks-better-94f4a935</link>
+      <description>Tariffs Crimped Hiring in 2025. Why This Year Looks Better.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/tariffs-crimped-hiring-2025-this-year-looks-better-94f4a935</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Private Payrolls Gain 41,000 in December, ADP Reports</title>
+      <link>https://www.barrons.com/articles/adp-jolts-jobs-data-economy-fed-rates-c0f480a1</link>
+      <description>Private Payrolls Gain 41,000 in December, ADP Reports</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/adp-jolts-jobs-data-economy-fed-rates-c0f480a1</guid>
+      <category>Featured</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Risks to Energy Dividends</title>
+      <link>https://www.barrons.com/articles/venezuela-energy-dividend-stocks-risks-1dae8a4c</link>
+      <description>The Risks to Energy Dividends</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/venezuela-energy-dividend-stocks-risks-1dae8a4c</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Trump Is Calling the Shots on Oil. What He Can’t Do.</title>
+      <link>https://www.barrons.com/articles/trump-oil-venezuela-cheap-gas-408bdd6b</link>
+      <description>Trump Is Calling the Shots on Oil. What He Can’t Do.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/trump-oil-venezuela-cheap-gas-408bdd6b</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Nvidia Is Missing Out on the Latest AI Stock Surge</title>
+      <link>https://www.barrons.com/articles/nvidia-stock-price-sandisk-dc00c411</link>
+      <description>Nvidia Is Missing Out on the Latest AI Stock Surge</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/nvidia-stock-price-sandisk-dc00c411</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Warner Bros. Rejects Paramount’s Offer Again</title>
+      <link>https://www.barrons.com/articles/warner-brothers-rejects-paramount-netflix-a7d89e7a</link>
+      <description>Warner Bros. Rejects Paramount’s Offer Again</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/warner-brothers-rejects-paramount-netflix-a7d89e7a</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Op-Ed: Stop Obsessing About Risks and Let the Banks Compete</title>
+      <link>https://www.barrons.com/articles/stop-obsessing-about-risks-and-let-the-banks-compete-027daec0</link>
+      <description>Op-Ed: Stop Obsessing About Risks and Let the Banks Compete</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/stop-obsessing-about-risks-and-let-the-banks-compete-027daec0</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>There’s No Bull Market Without Banks. 3 Names With Positive Charts.</title>
+      <link>https://www.barrons.com/articles/financial-stocks-moelis-lemonade-bank-montreal-bullish-charts-ae6d67b4</link>
+      <description>There’s No Bull Market Without Banks. 3 Names With Positive Charts.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/financial-stocks-moelis-lemonade-bank-montreal-bullish-charts-ae6d67b4</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+    <item>
+      <title>Bank Stocks Are Off the Charts. Now Bonds Are Sending This Signal.</title>
+      <link>https://www.barrons.com/articles/bank-stocks-buy-bonds-jpmorgan-earnings-312c5a31</link>
+      <description>Bank Stocks Are Off the Charts. Now Bonds Are Sending This Signal.</description>
+      <guid isPermaLink="false">https://www.barrons.com/articles/bank-stocks-buy-bonds-jpmorgan-earnings-312c5a31</guid>
+      <category>Top Stories</category>
+      <pubDate>Wed, 07 Jan 2026 15:30:01 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
