@@ -6,10 +6,12 @@
 
 ## tl;dr Available RSS Feeds <!-- omit in toc -->
 
-| Blog                                                                                  | Feed                                                                                                                                           |
-| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Noordhollands Dagblad - Alkmaar](https://www.noordhollandsdagblad.nl/regio/alkmaar/) | [feed_noordhollandsdagblad_alkmaar.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml) |
-| [Barron's](https://www.barrons.com/)                                                  | [feed_barrons.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_barrons.xml)                                           |
+These are sites I'm subscribed to but that don't offer RSS feeds. Now they do!
+
+| Blog                                                                                  | Feed                                                                                                                                           | Notes                                                                                              |
+| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [Noordhollands Dagblad - Alkmaar](https://www.noordhollandsdagblad.nl/regio/alkmaar/) | [feed_noordhollandsdagblad_alkmaar.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_noordhollandsdagblad_alkmaar.xml) | Local news from the Alkmaar region                                                                 |
+| [Barron's](https://www.barrons.com/)                                                  | [feed_barrons.xml](https://raw.githubusercontent.com/vandijks/rss-feeds/main/feeds/feed_barrons.xml)                                           | Excludes: Commentary, Media, Video, Magazine, Retirement. Includes: Markets, Tech, Stock Picks... |
 
 > **Note:** Original feeds from the upstream repo are archived in `feed_generators/archive/` and `feeds/archive/` for reference.
 
@@ -23,12 +25,9 @@ You know that blog you like that doesn't have an RSS feed and might never will?
 
 - [Quick Start](#quick-start)
   - [Subscribe to a Feed](#subscribe-to-a-feed)
-  - [Request a new Feed](#request-a-new-feed)
-- [Create a new a Feed](#create-a-new-a-feed)
-- [Star History](#star-history)
 - [Ideas](#ideas)
 - [How It Works](#how-it-works)
-  - [For Developers 👀 only](#for-developers--only)
+  - [For Developers](#for-developers)
 
 ## Quick Start
 
@@ -43,26 +42,6 @@ You know that blog you like that doesn't have an RSS feed and might never will?
   ```
 
 - Use your RSS reader of choice to subscribe to the feed (e.g., [Blogtrottr](https://blogtrottr.com/)).
-
-### Request a new Feed
-
-Want a new feed? [Open a GitHub issue](https://github.com/vandijks/rss-feeds/issues/new) with the blog URL.
-
-> Consider supporting the original author [Daniel Olshansky](https://github.com/Olshansk) by [buying him a coffee](https://buymeacoffee.com/olshansky).
-
-## Create a new a Feed
-
-1. Download the HTML of the blog you want to create a feed for.
-2. Open Claude Code CLI
-3. Tell claude to:
-
-```bash
-Use @cmd_rss_feed_generator.md to convert @<html_file>.html to a RSS feed for <blog_url>.
-```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Olshansk/rss-feeds&type=Date)](https://star-history.com/#Olshansk/rss-feeds&Date)
 
 ## Ideas
 
@@ -103,7 +82,7 @@ flowchart TB
     style websites fill:#e2e3e5,stroke:#383d41,color:#000000
 ```
 
-### For Developers 👀 only
+### For Developers
 
 - Open source and community-driven 🙌
 - Simple Python + GitHub Actions 🐍
